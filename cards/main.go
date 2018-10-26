@@ -5,16 +5,10 @@ import (
 )
 
 func main() {
-	cards := []string{newCard(), newCard()}
-	cards = append(cards, "Six of spades")
+	cards := newDeck()
 
-	for i, card := range cards {
-
-		fmt.Println(i, card)
-	}
-
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	cards.print()
+	fmt.Println("--------")
+	cards.shuffle()
+	cards.print()
 }
